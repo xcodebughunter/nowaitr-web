@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tag -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Seo Meta -->
+    <meta name="description" content="Dashto - Powerfull Admin Template" />
+    <meta
+      name="keywords"
+      content="admin dashboard, admin panel, dashboard, responsive dashboard, admin template, themeforest, dashboard template, css3, html5"
+    />
+
+    <title>NoWaitr App</title>
+
+    <!-- Favicon -->
+    <link href="../../assets/img/logo/favicon.png" rel="icon" />
+
+    <!-- IOS Touch Icons -->
+    <link
+      rel="apple-touch-icon"
+      href="../../assets/img/logo/touch-icon-iphone.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../../assets/img/logo/touch-icon-ipad.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../assets/img/logo/touch-icon-iphone-retina.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="../../assets/img/logo/touch-icon-ipad-retina.png"
+    />
+
+    <!-- Styles -->
+    <link href="../../assets/css/vendor.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      #wrapper {
+        padding: 50px 120px 120px 120px;
+      }
+
+      .text-header {
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .text-conditions {
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .text-conditions-link {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .title-form {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 500;
+        margin: 20px 0 20px 0;
+        color: #707070;
+      }
+
+      .button-form {
+        width: 304px;
+        height: 57px;
+        border-radius: 13px;
+        background-color: #ff523f;
+        margin-bottom: 15px;
+        font-weight: 700;
+        font-size: 20px;
+        color: white;
+      }
+
+      .button-modal {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .container-qr {
+        border: solid 1px transparent;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .text-modal {
+        font-size: 15px;
+        text-align: justify;
+        padding: 0 20px 0 20px;
+      }
+
+      .text-modal b {
+        font-weight: 700;
+      }
+    </style>
+  </head>
+
+  <body class="theme-red theme-dark">
+    <!-- Begin | Page Loader [[ Find in loader.scss ]] -->
+    <div id="loader">
+      <div id="loader-content">
+        <div id="loader-circle"></div>
+        <span>NoWaitr Admin</span>
+      </div>
+    </div>
+    <!-- End | Page Loader -->
+
+    <!-- Begin | Page Wrapper [[ Find in core.scss ]] -->
+    <div id="wrapper">
+      <!-- Begin | Page Content Wrapper [[ Find in core.scss ]] -->
+      <main>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+              <img src="../../assets/img/logo.png" style="margin: 0 auto;" />
+              <br />
+              <p class="text-conditions">
+                Sigue los siguientes pasos para completar
+                <span class="text-conditions-link"
+                  >tu perfil de RESTAURANTE</span
+                >
+              </p>
+            </div>
+            <div class="col-3"></div>
+          </div>
+        </div>
+
+        <p class="title-form">Genera el código QR</p>
+
+        <br />
+        <!-- Begin | Main Container -->
+        <div class="container-fluid">
+          <!-- Begin | Row -->
+          <div class="row">
+            <div class="col-lg-4"></div>
+
+            <!-- Begin | Column -->
+            <div class="col-lg-4">
+              <div class="container-qr" id="container-image-qr">
+                <img src="../../assets/img/qr-background.jpg" />
+              </div>
+            </div>
+            <!-- End | Column -->
+
+            <!-- Begin | Column -->
+            <div class="col-lg-4"></div>
+            <!-- End | Column -->
+          </div>
+          <!-- End | Row -->
+
+          <br />
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col-6" style="text-align: center">
+                <p class="title-form">
+                  Se generará un código con el perfil de tu negocio.
+                </p>
+                <br />
+                <button
+                  class="btn button-form"
+                  onclick="generateQRImage(event)"
+                >
+                  GENERA EL CÓDIGO
+                </button>
+
+                <br />
+              </div>
+              <div class="col-3"></div>
+            </div>
+          </div>
+          <br />
+        </div>
+        <!-- End | Main Container -->
+      </main>
+      <!-- End | Page Content Wrapper -->
+
+      <!-- Begin | Modal -->
+      <div
+        class="modal fade"
+        id="modalDownloadQR"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">
+                Se ha creado tu código QR para tu negocio.
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <br />
+            <div class="modal-body">
+              <div class="container-qr" id="image-qr-modal"></div>
+              <br />
+              <p class="text-modal">
+                Recuerda impimir tu <b>código QR</b> en una impresora laser no
+                de puntos, así garantizarás su lecturabilidad.
+              </p>
+              <br />
+              <p class="text-modal">
+                Imprímelo de <b>minimo 4 x 4 cm</b>, y ponlo En un lugar visible
+                en cada mesa y o barra.
+              </p>
+              <div class="button-modal">
+                <button
+                  type="button"
+                  class="btn button-form "
+                  onclick="downloadQRImage(event)"
+                >
+                  <i class="font-24 mi mi-file-download"></i> DESCARGA CÓDIGO
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End | Modal -->
+
+      <!-- Begin | Right Sidebar [[ Find in right-sidebar.scss ]] -->
+      <aside id="right-sidebar"></aside>
+      <!-- End | Right Sidebar -->
+    </div>
+    <!-- End | Page Wrapper -->
+
+    <script src="../../assets/js/vendor.js"></script>
+    <script src="../../assets/js/base/init.switcher.js"></script>
+    <script src="../../assets/js/base/custom.js"></script>
+
+    <script defer src="../../assets/js/qrcodejs/qrcode.min.js"></script>
+    <script defer src="../../assets/js/download.js"></script>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"
+    ></script>
+
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/5.10.1/firebase-storage.js"
+    ></script>
+
+    <script defer src="../../assets/js/firebase/init.js"></script>
+    <script defer src="../../assets/js/firebase/auth.js"></script>
+    <script defer src="../../assets/js/firebase/init-profile.js"></script>
+    <script>
+      if (window.screen.height <= 768) {
+        document.body.style.zoom = '80%';
+      }
+    </script>
+  </body>
+</html>

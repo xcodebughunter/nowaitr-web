@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tag -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Seo Meta -->
+  <meta name="description" content="Dashto - Powerfull Admin Template" />
+  <meta name="keywords"
+    content="admin dashboard, admin panel, dashboard, responsive dashboard, admin template, themeforest, dashboard template, css3, html5" />
+
+  <title>NoWaitr App</title>
+
+  <!-- Favicon -->
+  <link href="../../assets/img/logo/favicon.png" rel="icon" />
+
+  <!-- IOS Touch Icons -->
+  <link rel="apple-touch-icon" href="../../assets/img/logo/touch-icon-iphone.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="../../assets/img/logo/touch-icon-ipad.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/logo/touch-icon-iphone-retina.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="../../assets/img/logo/touch-icon-ipad-retina.png" />
+
+  <!-- Styles -->
+  <link href="../../assets/css/vendor.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style>
+    #wrapper {
+      padding: 50px 120px 120px 120px;
+    }
+
+    .text-header {
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .text-conditions {
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .text-conditions-link {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .title-form {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 500;
+      margin: 30px 0 20px 0;
+      color: #707070;
+    }
+
+    .button-form {
+      width: 304px;
+      height: 57px;
+      border-radius: 13px;
+      background-color: #ff523f;
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 20px;
+      color: white;
+    }
+
+    .container-image-droify {
+      height: 300px;
+      width: 875px;
+      margin: 0 auto;
+    }
+
+    .dropify-render img {
+      margin: 0 auto;
+    }
+
+  </style>
+</head>
+
+<body class="theme-red theme-dark">
+  <!-- Begin | Page Loader [[ Find in loader.scss ]] -->
+  <div id="loader">
+    <div id="loader-content">
+      <div id="loader-circle"></div>
+      <span>NoWaitr Admin</span>
+    </div>
+  </div>
+  <!-- End | Page Loader -->
+
+  <!-- Begin | Page Wrapper [[ Find in core.scss ]] -->
+  <div id="wrapper">
+    <!-- Begin | Page Content Wrapper [[ Find in core.scss ]] -->
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <img src="../../assets/img/logo.png" style="margin: 0 auto;" />
+            <br />
+            <p class="text-conditions">
+              Sigue los siguientes pasos para completar
+              <span class="text-conditions-link">tu perfil de RESTAURANTE</span>
+            </p>
+          </div>
+          <div class="col-3"></div>
+        </div>
+      </div>
+
+      <p class="title-form">Sube una foto de tu restaurante</p>
+
+      <br />
+      <!-- Begin | Main Container -->
+      <div class="container-fluid">
+        <div class="container-image-droify">
+          <input type="file" id="field-cover-image" data-max-file-size="150k" data-height="300" data-width="875" />
+        </div>
+
+        <br />
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6" style="text-align: center">
+              <p class="title-form">
+                En formato PNG o JPG, a máximo 150 kb Tamaño de 875 x 300 px
+              </p>
+              <br />
+              <button class="btn  button-form" onclick="saveFormStep2(event)">
+                SUBIR FOTO
+              </button>
+
+              <br />
+            </div>
+            <div class="col-3"></div>
+          </div>
+        </div>
+        <br />
+      </div>
+      <!-- End | Main Container -->
+    </main>
+    <!-- End | Page Content Wrapper -->
+
+    <!-- Begin | Right Sidebar [[ Find in right-sidebar.scss ]] -->
+    <aside id="right-sidebar"></aside>
+    <!-- End | Right Sidebar -->
+  </div>
+  <!-- End | Page Wrapper -->
+
+  <script src="../../assets/js/vendor.js"></script>
+  <script src="../../assets/js/base/init.switcher.js"></script>
+  <script src="../../assets/js/base/custom.js"></script>
+
+  <script>
+    $('#field-cover-image').dropify({
+      messages: {
+        default: 'Arrastra y suelta un archivo aquí o haz clic',
+        replace: 'Arrastra y suelta o click para reemplazar',
+        remove: 'Eliminar',
+        error: 'Ooops. ha ocurrido un error'
+      },
+      error: {
+        fileSize: 'El tamaño del archivo es demasiado grande ({{ value }} max).',
+        minWidth: 'El ancho de la imagen es demasiado pequeño ({{ value }} px min).',
+        maxWidth: 'El ancho de la imagen es demasiado grande ({{ value }} px max).',
+        minHeight: 'La altura de la imagen es demasiado pequeña ({{ value }} px min).',
+        maxHeight: 'La altura de la imagen es demasiado grande ({{ value }} px max).',
+        imageFormat: 'El formato de imagen no está permitido ({{value}} solamente)',
+        fileExtension: 'El archivo no está permitido (solo {{value}})'
+      }
+    });
+
+  </script>
+
+  <script defer
+    src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
+
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
+
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-storage.js"></script>
+
+  <script defer src="../../assets/js/firebase/init.js"></script>
+  <script defer src="../../assets/js/firebase/auth.js"></script>
+  <script defer src="../../assets/js/firebase/init-profile.js"></script>
+
+  <script>
+    if (window.screen.height <= 768) {
+      document.body.style.zoom = '80%';
+    }
+
+  </script>
+</body>
+
+</html>

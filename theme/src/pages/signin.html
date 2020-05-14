@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tag -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Seo Meta -->
+  <meta name="description" content="Dashto - Powerfull Admin Template" />
+  <meta name="keywords"
+    content="admin dashboard, admin panel, dashboard, responsive dashboard, admin template, themeforest, dashboard template, css3, html5" />
+
+  <title>NoWaitr Admin</title>
+
+  <!-- Favicon -->
+  <link href="../assets/img/logo/favicon.png" rel="icon" />
+
+  <!-- IOS Touch Icons -->
+  <link rel="apple-touch-icon" href="../assets/img/logo/touch-icon-iphone.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/logo/touch-icon-ipad.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/touch-icon-iphone-retina.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="../assets/img/logo/touch-icon-ipad-retina.png" />
+
+  <!-- Styles -->
+  <link href="../assets/css/vendor.css" rel="stylesheet" type="text/css" />
+  <link href="../assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .link {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    #wrapper {
+      padding-top: 30px;
+    }
+
+  </style>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- Begin | Page Loader [[ Find in loader.scss ]] -->
+  <div id="loader">
+    <div id="loader-content">
+      <div id="loader-circle"></div>
+      <span>NoWaitr Admin</span>
+    </div>
+  </div>
+  <!-- End | Page Loader -->
+
+  <!-- Begin | Page Wrapper [[ Find in core.scss ]] -->
+  <div id="wrapper" class="full-height auth-widget">
+    <!-- Begin | Auth Panel [[ Find in auth.scss ]] -->
+    <div class="card card-shadow auth-panel">
+      <div class="center-logo">
+        <img src="../assets/img/logo.png" width="277" height="70" />
+      </div>
+      <h4 class="h4 mb-5 title-form">Crea tu cuenta!</h4>
+      <div id="messages"></div>
+      <form action="" class="mb-3" onsubmit="return signIn(event)">
+        <div class="form-field">
+          <input type="text" id="field-username" placeholder="Correo" class="form-control" required />
+        </div>
+        <div class="form-field">
+          <input type="password" id="field-password" placeholder="Contraseña" class="form-control" required />
+        </div>
+        <div class="form-field d-flex">
+          <div class="cf-checkbox mr-auto">
+            <input type="checkbox" id="remeber" />
+            <label for="remeber">Recordar</label>
+          </div>
+        </div>
+        <div class="form-field">
+          <input type="submit" value="Ingresar" class="btn btn-block bg-red-custom" />
+        </div>
+      </form>
+      <div class="form-field d-flex justify-content-center">
+        <a href="#" onclick="javascript:signInWithFacebook()" class="btn bg-blue" id="btn-signin-facebook">
+          <i class="icon ion-social-facebook"></i>
+          <span class="ml-1">Facebook login</span>
+        </a>
+        <a href="#" onclick="javascript:signInWithGoogle()" class="btn bg-red ml-2 ml-sm-3" id="btn-signin-google">
+          <i class="icon ion-social-googleplus"></i>
+          <span class="ml-1">Google login</span>
+        </a>
+      </div>
+
+      <p>
+        Al presionar login, confirmo que estoy de acuerdo con los <a href="javascript:openModalTermsConditions()"
+          class="link">términos y condiciones</a>
+        de nowaitr
+      </p>
+      <br>
+      <p>
+        No tienes una cuenta?
+        <a href="signup.html" class="c-cyan" id="btn-signin">Registro</a>
+      </p>
+      <p>
+        <a href="forgot-password.html" class="c-cyan" id="btn-signin">Olvidaste tu contraseña?</a>
+      </p>
+    </div>
+    <!-- End | Auth Panel -->
+  </div>
+  <!-- End | Page Wrapper -->
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" id="modal-term-conditions" role="dialog"
+    aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myLargeModalLabel">Términos y Condiciones</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe src="terms-conditions.html" style="width: 100%;" height="500"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="../assets/js/vendor.js"></script>
+  <script src="../assets/js/base/custom.js"></script>
+  <script defer src="../assets/js/loadingoverlay.min.js"></script>
+
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
+
+  <script defer src="../assets/js/firebase/init.js"></script>
+  <script defer src="../assets/js/firebase/auth.js"></script>
+</body>
+
+</html>
