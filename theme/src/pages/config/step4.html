@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tag -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Seo Meta -->
+  <meta name="description" content="Dashto - Powerfull Admin Template" />
+  <meta name="keywords"
+    content="admin dashboard, admin panel, dashboard, responsive dashboard, admin template, themeforest, dashboard template, css3, html5" />
+
+  <title>NoWaitr App</title>
+
+  <!-- Favicon -->
+  <link href="../../assets/img/logo/favicon.png" rel="icon" />
+
+  <!-- IOS Touch Icons -->
+  <link rel="apple-touch-icon" href="../../assets/img/logo/touch-icon-iphone.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="../../assets/img/logo/touch-icon-ipad.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/logo/touch-icon-iphone-retina.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="../../assets/img/logo/touch-icon-ipad-retina.png" />
+
+  <!-- Styles -->
+  <link href="../../assets/css/vendor.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style>
+    #wrapper {
+      padding: 80px 120px 120px 120px;
+    }
+
+    .text-header {
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .text-conditions {
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .text-conditions-link {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .title-form {
+      text-align: center;
+      font-size: 25px;
+      font-weight: 500;
+      margin: 0px 0 20px 0;
+      color: #707070;
+    }
+
+    .button-form {
+      width: 304px;
+      height: 57px;
+      border-radius: 13px;
+      background-color: #ff523f;
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 20px;
+      color: white;
+    }
+
+    .container-qr {
+      border: solid 1px black;
+      border-radius: 10px;
+      height: 300px;
+      width: 300px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body class="theme-red theme-dark">
+  <!-- Begin | Page Loader [[ Find in loader.scss ]] -->
+  <div id="loader">
+    <div id="loader-content">
+      <div id="loader-circle"></div>
+      <span>NoWaitr Admin</span>
+    </div>
+  </div>
+  <!-- End | Page Loader -->
+
+  <!-- Begin | Page Wrapper [[ Find in core.scss ]] -->
+  <div id="wrapper">
+    <!-- Begin | Page Content Wrapper [[ Find in core.scss ]] -->
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <img src="../../assets/img/logo.png" style="margin: 0 auto;" />
+            <br />
+            <p class="text-conditions">
+              Sigue los siguientes pasos para completar
+              <span class="text-conditions-link">tu perfil de
+                <span id="name_type_commerce">RESTAURANTE</span></span>
+            </p>
+          </div>
+          <div class="col-3"></div>
+        </div>
+      </div>
+
+      <p class="title-form">Selecciona los tipos de menú que ofreces</p>
+
+      <br />
+      <!-- Begin | Main Container -->
+      <div class="container-fluid">
+        <!-- Begin | Row -->
+        <div class="row">
+          <div class="col-lg-4"></div>
+
+          <!-- Begin | Column -->
+          <div class="col-lg-4">
+            <div class="card card-shadow card-h-100 p-3" id="container-checkbox-menu"></div>
+          </div>
+          <!-- End | Column -->
+
+          <!-- Begin | Column -->
+          <div class="col-lg-4"></div>
+          <!-- End | Column -->
+        </div>
+        <!-- End | Row -->
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6" style="text-align: center">
+              <br />
+
+              <button class="btn title-form" onclick="saveFormStep4()">
+                SIGUIENTE
+                <i class="mi mi-arrow-forward"></i>
+              </button>
+            </div>
+            <div class="col-3"></div>
+          </div>
+        </div>
+        <br />
+      </div>
+      <!-- End | Main Container -->
+    </main>
+    <!-- End | Page Content Wrapper -->
+
+    <!-- Begin | Right Sidebar [[ Find in right-sidebar.scss ]] -->
+    <aside id="right-sidebar"></aside>
+    <!-- End | Right Sidebar -->
+  </div>
+  <!-- End | Page Wrapper -->
+
+  <script src="../../assets/js/vendor.js"></script>
+  <script src="../../assets/js/base/init.switcher.js"></script>
+  <script src="../../assets/js/base/custom.js"></script>
+
+  <script defer
+    src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
+
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
+
+  <script defer src="../../assets/js/firebase/init.js"></script>
+  <script defer src="../../assets/js/firebase/auth.js"></script>
+  <script defer src="../../assets/js/firebase/init-profile.js"></script>
+  <script defer src="../../assets/js/data/menu.js"></script>
+
+  <script>
+    $(document).ready(() => {
+      if (window.localStorage.getItem('name_type_commerce')) {
+        $('#name_type_commerce').text(
+          window.localStorage.getItem('name_type_commerce')
+        );
+      }
+
+      if (window.localStorage.getItem('type_commerce')) {
+        const [, type] = window.localStorage
+          .getItem('type_commerce')
+          .split('_');
+
+        window.dataMenusCommerce[`${type}`].forEach(item => {
+          $('#container-checkbox-menu').append(
+            `<div class="cf-checkbox cf-blue mb-3">
+              <input
+                  type="checkbox"
+                  class="input_menu"
+                  id="${item.key}"
+                  data-color="${item.color}"
+                  data-order="${item.order}"
+                  data-icon="${item.icon}"
+              />
+              <label for="${item.key}">${item.name}</label>
+            </div>`
+          );
+        });
+      }
+
+      if (window.screen.height <= 768) {
+        document.body.style.zoom = '85%';
+      }
+    });
+  </script>
+</body>
+
+</html>
