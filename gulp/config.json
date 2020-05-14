@@ -1,0 +1,234 @@
+{
+  "config": {
+    "compile": {
+      "htmlMinify": false,
+      "jsUglify": false,
+      "cssMinify": false,
+      "jsSourcemaps": false,
+      "cssSourcemaps": false
+    },
+    "path": {
+      "src": "theme/src",
+      "node_modules": "node_modules",
+      "dist": "theme/dist"
+    }
+  },
+  "build": {
+    "vendors": {
+      "base": {
+        "src": {
+          "mandatory": {
+            "jquery": {
+              "scripts": ["{$config.path.node_modules}/jquery/dist/jquery.js"]
+            },
+            "bootstrap": {
+              "styles": [
+                "{$config.path.node_modules}/bootstrap/dist/css/bootstrap.min.css"
+              ],
+              "scripts": [
+                "{$config.path.node_modules}/bootstrap/dist/js/bootstrap.bundle.js"
+              ]
+            },
+            "jquery.cookie": {
+              "scripts": [
+                "{$config.path.node_modules}/jquery.cookie/jquery.cookie.js"
+              ]
+            },
+            "moment": {
+              "scripts": [
+                "{$config.path.node_modules}/moment/min/moment.min.js"
+              ]
+            },
+            "jquery-slimscroll": {
+              "scripts": [
+                "{$config.path.node_modules}/jquery-slimscroll/jquery.slimscroll.min.js"
+              ]
+            }
+          },
+          "optional": {
+            "font-awesome": {
+              "styles": [
+                "{$config.path.node_modules}/font-awesome/css/font-awesome.min.css"
+              ],
+              "fonts": ["{$config.path.node_modules}/font-awesome/fonts/**/*"]
+            },
+            "ionicons-npm": {
+              "styles": [
+                "{$config.path.node_modules}/ionicons-npm/css/ionicons.min.css"
+              ],
+              "fonts": ["{$config.path.node_modules}/ionicons-npm/fonts/**/*"]
+            },
+            "material-icons": {
+              "styles": [
+                "{$config.path.node_modules}/material-icons/iconfont/material-icons.css",
+                "{$config.path.node_modules}/material-icons/css/material-icons.min.css"
+              ],
+              "fonts": [
+                "{$config.path.node_modules}/material-icons/iconfont/**/*.{svg,eot,ttf,woff,woff2}"
+              ]
+            },
+            "weather-icons": {
+              "styles": [
+                "{$config.path.node_modules}/weather-icons/css/weather-icons.min.css"
+              ],
+              "fonts": ["{$config.path.node_modules}/weather-icons/font/**/*"]
+            },
+            "owl.carousel2": {
+              "styles": [
+                "{$config.path.node_modules}/owl.carousel2/dist/assets/owl.carousel.min.css",
+                "{$config.path.node_modules}/owl.carousel2/dist/assets/owl.theme.default.min.css"
+              ],
+              "scripts": [
+                "{$config.path.node_modules}/owl.carousel2/dist/owl.carousel.min.js"
+              ],
+              "images": [
+                "{$config.path.node_modules}/owl.carousel2/dist/assets/owl.video.play.png",
+                "{$config.path.node_modules}/owl.carousel2/dist/assets/ajax-loader.gif"
+              ]
+            },
+            "chart.js": {
+              "scripts": [
+                "{$config.path.node_modules}/chart.js/dist/Chart.bundle.min.js"
+              ]
+            },
+            "jquery-sparkline": {
+              "scripts": [
+                "{$config.path.node_modules}/jquery-sparkline/jquery.sparkline.min.js"
+              ]
+            },
+            "flot": {
+              "scripts": [
+                "{$config.path.node_modules}/flot/jquery.flot.js",
+                "{$config.path.node_modules}/flot/jquery.flot.resize.js",
+                "{$config.path.node_modules}/flot/jquery.flot.categories.js",
+                "{$config.path.node_modules}/flot/jquery.flot.fillbetween.js",
+                "{$config.path.node_modules}/flot/jquery.flot.stack.js",
+                "{$config.path.node_modules}/flot/jquery.flot.pie.js"
+              ]
+            },
+            "chartist": {
+              "styles": [
+                "{$config.path.node_modules}/chartist/dist/chartist.min.css"
+              ],
+              "scripts": [
+                "{$config.path.node_modules}/chartist/dist/chartist.min.js"
+              ]
+            },
+            "jvectormap": {
+              "styles": [
+                "{$config.path.node_modules}/jvectormap/jquery-jvectormap.css"
+              ],
+              "scripts": [
+                "{$config.path.node_modules}/jvectormap/jquery-jvectormap.min.js",
+                "{$config.path.node_modules}/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js"
+              ]
+            },
+            "jquery-toast-plugin": {
+              "styles": [
+                "{$config.path.node_modules}/jquery-toast-plugin/dist/jquery.toast.min.css"
+              ],
+              "scripts": [
+                "{$config.path.node_modules}/jquery-toast-plugin/dist/jquery.toast.min.js"
+              ]
+            },
+            "weather": {
+              "scripts": [
+                "{$config.path.src}/assets/js/vendors/jquery.simpleWeather.min.js"
+              ]
+            },
+            "bootstrap-datepicker": {
+              "styles": [
+                "{$config.path.node_modules}/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css"
+              ],
+              "scripts": [
+                "{$config.path.node_modules}/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"
+              ]
+            },
+            "bootstrap-tagsinput": {
+              "styles": [
+                "{$config.path.node_modules}/bootstrap-tagsinput/dist/bootstrap-tagsinput.css"
+              ],
+              "scripts": [
+                "{$config.path.node_modules}/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"
+              ]
+            },
+            "datatables.net": {
+              "styles": [
+                "{$config.path.node_modules}/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
+              ],
+              "scripts": [
+                "{$config.path.node_modules}/datatables.net/js/jquery.dataTables.min.js",
+                "{$config.path.node_modules}/datatables.net-bs4/js/dataTables.bootstrap4.min.js"
+              ]
+            },
+            "dropify": {
+              "styles": [
+                "{$config.path.node_modules}/dropify/dist/css/dropify.min.css"
+              ],
+              "scripts": [
+                "{$config.path.node_modules}/dropify/dist/js/dropify.min.js"
+              ],
+              "fonts": ["{$config.path.node_modules}/dropify/dist/fonts/**/*"]
+            },
+            "montserrat": {
+              "fonts": ["{$config.path.src}/assets/fonts/montserrat/*"]
+            },
+            "wysihtml": {
+              "scripts": [
+                "{$config.path.node_modules}/wysihtml/dist/wysihtml.js",
+                "{$config.path.node_modules}/wysihtml/dist/wysihtml.all-commands.js",
+                "{$config.path.node_modules}/wysihtml/dist/wysihtml.toolbar.js",
+                "{$config.path.node_modules}/wysihtml/parser_rules/advanced_and_extended.js"
+              ]
+            },
+            "fullcalendar": {
+              "styles": [
+                "{$config.path.node_modules}/fullcalendar/dist/fullcalendar.min.css"
+              ],
+              "scripts": [
+                "{$config.path.node_modules}/fullcalendar/dist/fullcalendar.min.js"
+              ]
+            },
+            "sweetalert": {
+              "scripts": [
+                "{$config.path.node_modules}/sweetalert/dist/sweetalert.min.js"
+              ]
+            },
+            "x-editable": {
+              "styles": [
+                "{$config.path.node_modules}/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css"
+              ],
+              "scripts": [
+                "{$config.path.node_modules}/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js"
+              ],
+              "images": [
+                "{$config.path.node_modules}/x-editable/dist/bootstrap3-editable/img/**/*"
+              ]
+            }
+          }
+        },
+        "bundle": {
+          "styles": "{$config.path.dist}/assets/css/vendor.css",
+          "scripts": "{$config.path.dist}/assets/js/vendor.js",
+          "images": "{$config.path.dist}/assets/img",
+          "fonts": "{$config.path.dist}/assets/fonts"
+        }
+      }
+    },
+    "preview": {
+      "base": {
+        "src": {
+          "styles": "{$config.path.src}/assets/scss/styles.scss",
+          "scripts": "{$config.path.src}/assets/js/**/*.js",
+          "images": "{$config.path.src}/assets/img/**/*",
+          "html": "{$config.path.src}/**/*.html"
+        },
+        "bundle": {
+          "styles": "{$config.path.dist}/assets/css/styles.css",
+          "scripts": "{$config.path.dist}/assets/js"
+        },
+        "output": {}
+      }
+    }
+  }
+}

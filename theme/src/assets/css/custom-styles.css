@@ -1,0 +1,9 @@
+.center-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.bg-red-custom {
+  color: #ffffff;
+  background-color: #ff523f;
+}
